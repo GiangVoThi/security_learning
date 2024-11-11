@@ -5,7 +5,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationProvider;
-import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
@@ -26,7 +25,7 @@ public class SecurityConfiguration {
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(authorizeRequests ->
                         authorizeRequests
-                                .requestMatchers(HttpMethod.POST, "/api/v1/auth/**").permitAll() // Cho phép truy cập đến login
+                                .requestMatchers(HttpMethod.POST, "/api/v1/auth/**","/forgot-password/**").permitAll() // Cho phép truy cập đến login
                                 .anyRequest().authenticated() // Cần xác thực cho các yêu cầu khác
                 )
                 .sessionManagement(sessionManagement ->

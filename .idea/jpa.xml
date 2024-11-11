@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JpaBuddyIdeaProjectConfig" ddlActionDbType="maria" newRepositoryParent="org.springframework.data.jpa.repository.JpaRepository">
+    <option name="defaultUnitInitialized" value="true" />
+    <option name="newEntityIdStrategy" />
+    <option name="reLastEntityCreationPackage" value="src/main/java/com/example/study_security/data/entity" />
+    <option name="renamerInitialized" value="true" />
+    <option name="reverseEngineeringLastDbConnectionId" value="e1b4badf-ee4b-4fdc-97aa-c30bf86d34a8" />
+  </component>
+  <component name="PersistenceUnitSettings">
+    <persistence-units>
+      <persistence-unit name="Default">
+        <packages>
+          <package value="com.example.study_security" />
+        </packages>
+      </persistence-unit>
+    </persistence-units>
+  </component>
+</project>
