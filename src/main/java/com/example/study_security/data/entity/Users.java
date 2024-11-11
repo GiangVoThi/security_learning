@@ -23,8 +23,15 @@ public class Users implements UserDetails {
     @Column(name = "username", nullable = false, length = 50)
     private String username;
 
+    @Column(name = "email", nullable = false, length = 50)
+    private String email;
+
     @Column(name = "password", nullable = false)
     private String password;
+
+    @OneToOne(mappedBy = "user")
+    private ForgotPassword forgotPassword;
+
     @Enumerated(EnumType.STRING)
     private Role role;
 
@@ -60,4 +67,5 @@ public class Users implements UserDetails {
     public String getUsername() {
         return username;
     }
+
 }
